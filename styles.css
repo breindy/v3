@@ -1,0 +1,141 @@
+* {
+  font-size: 18px;
+  font-family: Gotham;
+  font-style: normal;
+  color: black;
+}
+
+/* NAVBAR SECTION */
+#navbar-logo {
+  font-family: Brandon Grotesque;
+  font-style: normal;
+  font-size: 35px;
+  font-weight: 500;
+  color: black;
+  padding-left: 20px;
+}
+#navbar-logo__dot {
+  font-size: 30px;
+  color: #399cf9;
+}
+
+.navbar-menu {
+  font-weight: 500;
+  font-family: Gotham;
+  font-style: normal;
+  color: black;
+}
+.navbar-end {
+  margin-right: 2%;
+}
+.navbar-item {
+  color: black;
+  margin-right: 2%;
+}
+.navbar-button {
+  margin-top: 3%;
+  background-color: #399cf9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  border: 2px solid #399cf9;
+  color: white;
+}
+.navbar-button:hover {
+  margin-top: 3%;
+  background-color: #48abff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  border: 2px solid #48abff;
+  color: white;
+}
+
+a.navbar-item:hover {
+  background-color: white;
+  color: #399cf9;
+}
+
+/* LANDING CONTENT SECTION */
+.landing-left {
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-left__heading-description {
+  color: black;
+}
+.landing-left__heading-description__content {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.landing-left__heading-description__skillset {
+  text-align: center;
+}
+
+.title {
+  font-weight: 500;
+  color: black;
+}
+
+.subtitle {
+  font-weight: 500;
+  color: black;
+}
+
+.skill {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #efefef;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.skill:hover {
+  cursor: default;
+  background-color: #e7e7e7;
+}
+
+.landing-left__heading-description__cta {
+  margin-top: 5%;
+  text-align: center;
+}
+.landing-cta__learn-more {
+  border: solid 1px #399cf9;
+  border-radius: 7px;
+  margin-right: 5%;
+}
+.landing-cta__learn-more:hover {
+  background-color: #f2f2f2;
+  border: solid 1px #399cf9;
+}
+.landing-cta__get-in-touch {
+  background-color: #399cf9;
+  color: white;
+  border: solid 2px #399cf9;
+  border-radius: 7px;
+}
+.landing-cta__get-in-touch:hover {
+  background-color: #48abff;
+  border: solid 2px #48abff;
+  color: white;
+}
+.landing-right {
+  height: 76vh;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img#landing-pfp {
+  transform: translateY(70px);
+  width: 80%;
+  border-radius: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */

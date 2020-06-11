@@ -106,7 +106,7 @@ a.navbar-item:hover {
 }
 
 .skill:hover {
-	cursor: pointer;
+	cursor: default;
 	background-color: #e7e7e7;
 }
 

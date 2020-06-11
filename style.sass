@@ -1,0 +1,131 @@
+$primary: #399cf9
+$primary-hover: #48abff
+$skillsBubble: #efefef
+
+@mixin general-font-styles
+    font-family: Gotham
+    font-style: normal
+    color: black
+
+@mixin navbar-button($color)
+    margin-top: 3%
+    background-color: $color
+    padding-top: 10px
+    padding-bottom: 10px
+    border-radius: 20px
+    border: 2px solid $color
+    color: white
+
+@mixin bold-black-text
+    font-weight: 500
+    color: black
+
+@mixin navbar-margins
+    margin-right: 2%
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+*
+    font-size: 18px
+    @include general-font-styles
+
+/* NAVBAR SECTION */
+#navbar-logo
+    font-family: Brandon Grotesque
+    font-style: normal
+    font-size: 35px
+    font-weight: 500
+    color: black
+    padding-left: 20px
+
+    &__dot
+        font-size: 30px
+        color: $primary
+
+.navbar
+    &-menu
+        font-weight: 500
+        @include general-font-styles
+    &-end
+        @include navbar-margins
+    &-item
+        color: black
+        @include navbar-margins
+    &-button
+        @include navbar-button($primary)
+    &-button:hover
+        @include navbar-button($primary-hover)
+
+a.navbar-item:hover
+    background-color: white
+    color: $primary
+
+/* LANDING CONTENT SECTION */
+.landing-left
+    height: 76vh
+    @include center
+
+    &__heading-description
+        color: black
+    &__heading-description__content
+        text-align: center
+        margin-bottom: 10px
+    &__heading-description__skillset
+        text-align: center
+
+.title
+    @include bold-black-text
+
+.subtitle
+    @include bold-black-text
+
+.skill
+    padding-left: 12px
+    padding-right: 12px
+    padding-top: 2px
+    padding-bottom: 2px
+    background-color: $skillsBubble
+    border-radius: 25px
+
+    margin-bottom: 5px
+    display: inline-block
+
+    &:hover
+        cursor: default
+        background-color: #e7e7e7
+
+.landing
+    &-left__heading-description__cta
+        margin-top: 5%
+        text-align: center
+    &-cta__learn-more
+        border: solid 1px $primary
+        border-radius: 7px
+        margin-right: 5%
+        &:hover
+            background-color: #f2f2f2
+            border: solid 1px $primary
+    &-cta__get-in-touch
+        background-color: $primary
+        color: white
+        border: solid 2px $primary
+        border-radius: 7px
+        &:hover
+            background-color: $primary-hover
+            border: solid 2px $primary-hover
+            color: white
+
+    &-right
+        height: 76vh
+        overflow: hidden
+        text-align: center
+
+        @include center
+
+img#landing-pfp
+    transform: translateY(70px)
+    width: 80%
+    border-radius: 30px
