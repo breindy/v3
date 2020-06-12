@@ -5,6 +5,14 @@
   color: black;
 }
 
+.section {
+  height: 100vh;
+}
+
+.container {
+  padding-top: 5%;
+}
+
 /* NAVBAR SECTION */
 #navbar-logo {
   font-family: Brandon Grotesque;
@@ -19,8 +27,16 @@
   color: #399cf9;
 }
 
+.current {
+  background-color: white;
+  line-height: 15px;
+  margin: 20px 0;
+  border-bottom: 4px solid #399cf9;
+}
+
 .navbar-menu {
   font-weight: 500;
+  animation: navAnimOpen 0.2s ease-in-out;
   font-family: Gotham;
   font-style: normal;
   color: black;
@@ -31,6 +47,18 @@
 .navbar-item {
   color: black;
   margin-right: 2%;
+}
+.navbar-item::after {
+  content: "";
+  display: block;
+  width: 4;
+  height: 4px;
+  background: #399cf9;
+  transition: width 0.3s;
+}
+.navbar-item:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }
 .navbar-button {
   margin-top: 3%;
@@ -109,7 +137,6 @@ a.navbar-item:hover {
   margin-right: 5%;
 }
 .landing-cta__learn-more:hover {
-  background-color: #f2f2f2;
   border: solid 1px #399cf9;
 }
 .landing-cta__get-in-touch {
@@ -136,6 +163,96 @@ img#landing-pfp {
   transform: translateY(70px);
   width: 80%;
   border-radius: 30px;
+}
+
+/* ABOUT CONTENT */
+.about-content, .experience-content, .projects-content {
+  background-color: #399cf9;
+  height: 70vh;
+}
+
+/* CONTENT SLIDER ATTEMPT */
+#contentsContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* NAVIGATION STYLES */
+#navigation {
+  bottom: 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+#navigation ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  margin-top: 6px;
+}
+#navigation ul li {
+  float: left;
+  text-align: center;
+  margin: 5px;
+  list-style: none;
+  cursor: pointer;
+  background-color: #cccccc;
+  padding: 4px;
+  border-radius: 50%;
+}
+#navigation ul li:hover {
+  background-color: #399cf9;
+}
+#navigation ul li.active {
+  background-color: #399cf9;
+  color: #ffffff;
+  outline-width: 7px;
+}
+#navigation ul li.active:hover {
+  background-color: 484848;
+  color: #ffffff;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  float: left;
+  white-space: normal;
+}
+
+.wrapper {
+  width: 10000px;
+  transform: translate3d(0, 0, 0);
+  animation: transitionIn 1s;
+}
+
+#about {
+  background-color: #0099CC;
+  background-image: url("//www.kirupa.com/images/blueSquare.png");
+  background-repeat: no-repeat;
+}
+
+#experience {
+  background-color: #ff7f50;
+  background-image: url("//www.kirupa.com/images/yellowSquare.png");
+  background-repeat: no-repeat;
+}
+
+#projects {
+  background-color: #DC143C;
+  background-image: url("//www.kirupa.com/images/graySquare.png");
+  background-repeat: no-repeat;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

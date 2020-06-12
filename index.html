@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Michelle Uy - Front End/UI Developer</title>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://breindy.dev">
         
@@ -24,81 +28,134 @@
 
         <div class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item">
+                <a class="navbar-item current itemLinks" href="#home" data-pos="0px">
                     Home
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item itemLinks" href="#about" data-pos="-1289px">
                     About
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item itemLinks" href="#experience" data-pos="-2569px">
                     Experience
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item itemLinks" href="#project" data-pos="-3849px">
                     Projects
                 </a>
-                <button class="navbar-item navbar-button button">
+                <button class="navbar-item itemLinks navbar-button button">
                     Resume
                 </button>
             </div>
         </div>
         </nav>
 
-        <!-- Landing Content -->
-        <section class="section">
-            <div class="container landing-container">
-                <div class="columns is-vcentered">
-                    <div class="column is-half landing-left">
-                        <div class="landing-left__heading-description">
-                            <div class="landing-left__heading-description__content">
-                                <h3 class="title is-3">Hi, I'm Michelle Uy! 👋🏻</h3>
-                                <p>I am a Software Engineer based in NYC 
-                                <br> currently looking for Full-Time opportunities.</p>
-                            </div>
-                            
-                            <div class="landing-left__heading-description__skillset">
-                                <p class="subtitle is-5">My skills and expertise includes:</p>
-                                <div class="landing-left__heading-description__skillset-skills">
-                                    <span>
-                                        <p class="skill">JavaScript</p>
-                                        <p class="skill">React</p>
-                                        <p class="skill">Node</p>
-                                        <p class="skill">Express</p>
-                                        <p class="skill">Python</p>
-                                    </span>
+        <div id="contentsContainer">
+            <div class="wrapper">
+                <!-- Landing Content -->
+                <section class="section" id="home">
+                    <div class="container landing-container">
+                        <div class="columns is-vcentered">
+                            <div class="column is-half landing-left">
+                                <div class="landing-left__heading-description">
+                                    <div class="landing-left__heading-description__content">
+                                        <h3 class="title is-3">Hi, I'm Michelle Uy! 👋🏻</h3>
+                                        <p>I am a Software Engineer based in NYC 
+                                        <br> currently looking for Full-Time opportunities.</p>
+                                    </div>
                                     
-                                    <span>
-                                        <p class="skill">Flask</p>
-                                        <p class="skill">SQL</p>
-                                        <p class="skill">D3.js</p>
-                                        <p class="skill">Django</p>
-                                        <p class="skill">Ruby</p>
-                                        <p class="skill">Rails</p>
-                                    </span>
+                                    <div class="landing-left__heading-description__skillset">
+                                        <p class="subtitle is-5">My skills and expertise includes:</p>
+                                        <div class="landing-left__heading-description__skillset-skills">
+                                            <span>
+                                                <p class="skill">JavaScript</p>
+                                                <p class="skill">React</p>
+                                                <p class="skill">Node</p>
+                                                <p class="skill">Express</p>
+                                                <p class="skill">Python</p>
+                                            </span>
+                                            
+                                            <span>
+                                                <p class="skill">Flask</p>
+                                                <p class="skill">SQL</p>
+                                                <p class="skill">D3.js</p>
+                                                <p class="skill">Django</p>
+                                                <p class="skill">Ruby</p>
+                                                <p class="skill">Rails</p>
+                                            </span>
 
-                                    <span>
-                                        <p class="skill">Sketch</p>
-                                        <p class="skill">Figma</p>
-                                        <p class="skill">Illustrator</p>
-                                        <p class="skill">Graphic Design</p>
-                                        <p class="skill">Web Development</p>
-                                    </span>
+                                            <span>
+                                                <p class="skill">Sketch</p>
+                                                <p class="skill">Figma</p>
+                                                <p class="skill">Illustrator</p>
+                                                <p class="skill">Graphic Design</p>
+                                                <p class="skill">Web Development</p>
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="landing-left__heading-description__cta">
+                                        <a class="button landing-cta__learn-more" href="#about">Learn More</a>
+                                        <a class="button landing-cta__get-in-touch">Get in Touch</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                                <div class="column is-half landing-right">
+                                    <div class="landing-right-content">
+                                        <img src="/assets/landing-profile-picture.jpg" id="landing-pfp">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    <!-- ABOUT SECTION -->
+                    <section class="section">
+                        <div class="container about-container">
+                            <div class="is-vcentered about-content" id="about">
+                                <p>This is the about section</p>
+                                <div class="">
 
                                 </div>
                             </div>
+                        </div>
+                    </section>
 
-                            <div class="landing-left__heading-description__cta">
-                                <button class="button landing-cta__learn-more">Learn More</button>
-                                <button class="button landing-cta__get-in-touch">Get in Touch</button>
+                    <!-- EXPERIENCE SECTION -->
+                    <section class="section">
+                        <div class="container experience-container">
+                            <div class="is-vcentered experience-content" id="experience">
+                                <p>This is the experience section</p>
+                                <div class="">
+
+                                </div>
                             </div>
-                            
                         </div>
-                    </div>
-                    <div class="column is-half landing-right">
-                        <div class="landing-right-content">
-                            <img src="/assets/landing-profile-picture.jpg" id="landing-pfp">
+                    </section>
+
+                    <section class="section">
+                        <div class="container projects-container">
+                            <div class="is-vcentered projects-content" id="projects">
+                                <p>This is the projects section</p>
+                                <div class="">
+
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
+
                 </div>
-        </section>
+            </div>
+
+        <!-- NAVIGATION -->
+        <div id="navigation">
+            <ul>
+                <li class="itemLinks active" data-pos="0px"></li>
+                <li class="itemLinks" data-pos="-1289px"></li>
+                <li class="itemLinks" data-pos="-2569px"></li>
+                <li class="itemLinks" data-pos="-3849px"></li>
+            </ul>
+        </div>
+
+
+        <script src="./assets/js/index.js"></script>
   </body>
 </html>

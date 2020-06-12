@@ -32,6 +32,12 @@ $skillsBubble: #efefef
     font-size: 18px
     @include general-font-styles
 
+.section
+    height: 100vh
+
+.container
+    padding-top: 5%
+
 /* NAVBAR SECTION */
 #navbar-logo
     font-family: Brandon Grotesque
@@ -45,15 +51,34 @@ $skillsBubble: #efefef
         font-size: 30px
         color: $primary
 
+.current
+    background-color: white
+    line-height: 15px
+    margin: 20px 0
+    border-bottom: 4px solid $primary
+
 .navbar
     &-menu
         font-weight: 500
+        animation: navAnimOpen .2s ease-in-out
         @include general-font-styles
     &-end
         @include navbar-margins
     &-item
         color: black
+
         @include navbar-margins
+        &::after
+            content: ''
+            display: block
+            width: 4
+            height: 4px
+            background: $primary
+            transition: width .3s
+
+        &:hover::after
+            width: 100%
+            transition: width 0.3s
     &-button
         @include navbar-button($primary)
     &-button:hover
@@ -63,7 +88,11 @@ a.navbar-item:hover
     background-color: white
     color: $primary
 
+
 /* LANDING CONTENT SECTION */
+.landing-container
+    // padding-top: 5%
+
 .landing-left
     height: 76vh
     @include center
@@ -106,7 +135,6 @@ a.navbar-item:hover
         border-radius: 7px
         margin-right: 5%
         &:hover
-            background-color: #f2f2f2
             border: solid 1px $primary
     &-cta__get-in-touch
         background-color: $primary
@@ -129,3 +157,81 @@ img#landing-pfp
     transform: translateY(70px)
     width: 80%
     border-radius: 30px
+
+/* ABOUT CONTENT */
+.about-content, .experience-content, .projects-content
+    background-color: $primary
+    height: 70vh
+
+
+/* CONTENT SLIDER ATTEMPT */
+#contentsContainer
+    width: 100%
+    overflow: hidden
+
+
+/* NAVIGATION STYLES */
+#navigation
+    bottom: 10px
+    position: fixed
+    text-align: center
+    width: 100%
+    ul
+        margin: 0px
+        padding: 0px
+        display: inline-block
+        margin-top: 6px
+        li
+            float: left
+            text-align: center
+            margin: 5px
+            list-style: none
+            cursor: pointer
+            background-color: #cccccc
+            padding: 4px
+            border-radius: 50%
+            // border: black 2px solid
+            &:hover
+                background-color: $primary
+            &.active
+                background-color: $primary
+                color: #ffffff
+                outline-width: 7px
+                &:hover
+                    background-color: 484848
+                    color: #ffffff
+
+.section
+    width: 100vw
+    height: 100vh
+    float: left
+    white-space: normal
+
+.wrapper
+    width: 10000px
+    transform: translate3d(0, 0, 0)
+    animation: transitionIn 1s
+
+#about 
+    background-color: #0099CC
+    background-image: url("//www.kirupa.com/images/blueSquare.png")
+    background-repeat: no-repeat
+
+#experience
+    background-color: #ff7f50
+    background-image: url("//www.kirupa.com/images/yellowSquare.png")
+    background-repeat: no-repeat
+
+#projects
+    background-color: #DC143C
+    background-image: url("//www.kirupa.com/images/graySquare.png")
+    background-repeat: no-repeat
+
+
+@keyframes transitionIn
+    from
+        opacity: 0
+        transform: translateY(-50px)
+    to
+        opacity: 1
+        transform: translateY(0)
