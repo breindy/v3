@@ -167,7 +167,10 @@ img#landing-pfp {
 
 /* ABOUT CONTENT */
 .about-content, .experience-content, .projects-content {
-  background-color: #399cf9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 70vh;
 }
 
@@ -195,7 +198,6 @@ img#landing-pfp {
   text-align: center;
   margin: 5px;
   list-style: none;
-  cursor: pointer;
   background-color: #cccccc;
   padding: 4px;
   border-radius: 50%;
@@ -216,11 +218,11 @@ img#landing-pfp {
 .section {
   width: 100vw;
   height: 100vh;
-  float: left;
   white-space: normal;
 }
 
 .wrapper {
+  position: relative;
   width: 10000px;
   transform: translate3d(0, 0, 0);
   animation: transitionIn 1s;

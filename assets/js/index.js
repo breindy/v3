@@ -2,9 +2,12 @@ $(document).on('click', '.navbar-item', function() {
 	$(this).addClass('current').siblings().removeClass('current');
 });
 
+//navbar links event listener
+var navbarItem = document.querySelectorAll('.navbar-item.itemLinks');
+
 // CONTENT SLIDING
-// just querying the DOM...like a boss!
-var links = document.querySelectorAll('.itemLinks');
+var links = document.querySelectorAll('li.itemLinks');
+
 var wrapper = document.querySelector('.wrapper');
 
 // the activeLink provides a pointer to the currently displayed item
@@ -13,10 +16,23 @@ var activeLink = 0;
 // setup the event listeners
 for (var i = 0; i < links.length; i++) {
 	var link = links[i];
+
 	link.addEventListener('click', setClickedItem, false);
 
 	// identify the item for the activeLink
 	link.itemID = i;
+}
+
+//add event listener to navbar-item
+for (let i = 0; i < navbarItem.length; i++) {
+	navbarItem[i].addEventListener('click', function() {
+		var navigationLink = i;
+		removeActiveLinks();
+
+		links[navigationLink].classList.add('active');
+
+		changePosition(navbarItem);
+	});
 }
 
 // set first item as active
@@ -27,8 +43,7 @@ function setClickedItem(e) {
 
 	var clickedLink = e.target;
 	activeLink = clickedLink.itemID;
-
-	changePosition(clickedLink);
+	console.log(activeLink);
 }
 
 function removeActiveLinks() {
@@ -46,4 +61,9 @@ function changePosition(link) {
 	wrapper.style.transform = translateValue;
 
 	link.classList.add('active');
+}
+
+// SCROLL TO SECTIONS
+function scrollTo(position) {
+	window.scrollY(position);
 }
