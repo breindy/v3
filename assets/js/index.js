@@ -4,6 +4,11 @@ $(document).on('click', '.navbar-item', function() {
 
 //navbar links event listener
 var navbarItem = document.querySelectorAll('.navbar-item.itemLinks');
+console.log(navbarItem);
+
+//content sections
+var contentSections = document.querySelectorAll('.section');
+console.log(contentSections);
 
 // CONTENT SLIDING
 var links = document.querySelectorAll('li.itemLinks');
@@ -29,6 +34,8 @@ for (let i = 0; i < navbarItem.length; i++) {
 		var navigationLink = i;
 		removeActiveLinks();
 
+		contentSections[i].classList.add('currentSection');
+
 		links[navigationLink].classList.add('active');
 
 		changePosition(navbarItem);
@@ -48,6 +55,7 @@ function setClickedItem(e) {
 
 function removeActiveLinks() {
 	for (var i = 0; i < links.length; i++) {
+		contentSections[i].classList.remove('currentSection');
 		links[i].classList.remove('active');
 	}
 }
