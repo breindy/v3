@@ -289,6 +289,7 @@ img#landing-pfp {
 }
 
 .social-footer {
+  z-index: 2;
   position: fixed;
   top: 95%;
   -webkit-transform: translateY(-50%);
@@ -306,8 +307,9 @@ img#landing-pfp {
   color: #399cf9;
 }
 .social-footer a:hover {
-  background-color: #399cf9;
   cursor: pointer;
+  color: #48abff;
+  opacity: 0.7;
 }
 
 .vertical-line {

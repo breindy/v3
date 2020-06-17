@@ -275,6 +275,7 @@ img#landing-pfp
         font-weight: 500
 
 .social-footer
+    z-index: 2
     position: fixed
     top: 95%
     -webkit-transform: translateY(-50%)
@@ -290,8 +291,10 @@ img#landing-pfp
             color: $primary
 
         &:hover
-            background-color: $primary
             cursor: pointer
+            color: $primary-hover
+            opacity: 0.7
+
 
 .vertical-line
     margin-left: 35px
