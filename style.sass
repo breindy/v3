@@ -225,9 +225,7 @@ img#landing-pfp
 
 #about 
     grid-area: overlap
-    background-color: #0099CC
-    background-image: url("//www.kirupa.com/images/blueSquare.png")
-    background-repeat: no-repeat
+    
 
 #experience
     grid-area: overlap
@@ -249,3 +247,29 @@ img#landing-pfp
     to
         opacity: 1
         transform: translateY(0)
+
+
+.about
+    &-picture
+        margin: 0 auto
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        background-image: url('/assets/headshot.jpeg')
+        background-size: 600px
+        background-position: -235px 620px
+
+    &-description
+        padding-top: 2%
+        margin: 0 auto
+        text-align: center
+        width: 600px
+        & p
+            font-size: 15px
+
+        
+    &-school
+        font-size: 15px
+        font-weight: 500
+
+

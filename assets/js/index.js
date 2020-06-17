@@ -29,7 +29,7 @@ for (var i = 0; i < links.length; i++) {
 }
 
 //add event listener to navbar-item
-for (let i = 0; i < navbarItem.length; i++) {
+for (let i = 0; i < navbarItem.length - 1; i++) {
 	navbarItem[i].addEventListener('click', function() {
 		var navigationLink = i;
 		removeActiveLinks();
