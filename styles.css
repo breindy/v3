@@ -288,4 +288,32 @@ img#landing-pfp {
   font-weight: 500;
 }
 
+.social-footer {
+  position: fixed;
+  top: 95%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.social-footer a {
+  display: block;
+  text-align: center;
+  padding: 5px 25px;
+  transition: all 0.3s ease;
+  font-size: 22px;
+}
+.social-footer a i {
+  color: #399cf9;
+}
+.social-footer a:hover {
+  background-color: #399cf9;
+  cursor: pointer;
+}
+
+.vertical-line {
+  margin-left: 35px;
+  border-left: 2px solid #399cf9;
+  height: 200px;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -166,8 +166,10 @@ img#landing-pfp
 
 /* ABOUT CONTENT */
 .about-content, .experience-content, .projects-content
+    
     width: 100%
     height: 70vh
+    
 
 
 /* CONTENT SLIDER ATTEMPT */
@@ -271,5 +273,32 @@ img#landing-pfp
     &-school
         font-size: 15px
         font-weight: 500
+
+.social-footer
+    position: fixed
+    top: 95%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+    & a
+        display: block
+        text-align: center
+        padding: 5px 25px
+        transition: all 0.3s ease
+        font-size: 22px
+        & i
+            color: $primary
+
+        &:hover
+            background-color: $primary
+            cursor: pointer
+
+.vertical-line
+    margin-left: 35px
+    border-left: 2px solid $primary
+    height: 200px
+
+
+    
 
 
