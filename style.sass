@@ -325,6 +325,7 @@ img#landing-pfp
 
 .slider 
     margin: 0 auto
+    // display: inline-block
     // background-color: $primary
     height: 45vh
 
@@ -335,6 +336,29 @@ img#landing-pfp
         // background-color: $skillsBubble
         padding-top: 2%
         height: 22vh
+
+.arrow
+    border: solid $primary
+    border-width: 0 3px 3px 0
+    display: inline-block
+    padding: 9px
+    transform: scale(5)
+    &:hover
+        cursor: pointer
+        opacity: 0.78
+.right
+    position: absolute
+    top: 50%
+    left: 10%
+    transform: rotate(135deg)
+    -webkit-transform: rotate(135deg)
+.left
+    position: absolute
+    top: 50%
+    right: 10%
+    transform: rotate(-45deg)
+    -webkit-transform: rotate(-45deg)
+    
         
 
 .separation

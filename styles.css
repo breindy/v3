@@ -354,6 +354,34 @@ img#landing-pfp {
   height: 22vh;
 }
 
+.arrow {
+  border: solid #399cf9;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 9px;
+  transform: scale(5);
+}
+.arrow:hover {
+  cursor: pointer;
+  opacity: 0.78;
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
 .separation {
   padding-top: 1%;
 }
