@@ -175,7 +175,7 @@ img#landing-pfp {
 /* ABOUT CONTENT */
 .about-content, .experience-content, .projects-content {
   width: 100%;
-  height: 70vh;
+  height: 72vh;
 }
 
 /* CONTENT SLIDER ATTEMPT */
@@ -243,9 +243,6 @@ img#landing-pfp {
 
 #experience {
   grid-area: overlap;
-  background-color: #ff7f50;
-  background-image: url("//www.kirupa.com/images/yellowSquare.png");
-  background-repeat: no-repeat;
 }
 
 #projects {
@@ -270,7 +267,7 @@ img#landing-pfp {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: url("/assets/headshot.jpeg");
+  background-image: url("/assets/headshot-min.jpeg");
   background-size: 600px;
   background-position: -235px 620px;
 }
@@ -289,7 +286,7 @@ img#landing-pfp {
 }
 
 .social-footer {
-  z-index: 2;
+  z-index: 15;
   position: fixed;
   top: 95%;
   -webkit-transform: translateY(-50%);
@@ -299,7 +296,7 @@ img#landing-pfp {
 .social-footer a {
   display: block;
   text-align: center;
-  padding: 5px 25px;
+  padding: 5px 17px;
   transition: all 0.3s ease;
   font-size: 22px;
 }
@@ -313,9 +310,65 @@ img#landing-pfp {
 }
 
 .vertical-line {
-  margin-left: 35px;
+  margin-left: 26px;
   border-left: 2px solid #399cf9;
   height: 200px;
+}
+
+/* EXPERIENCE SECTION */
+.slide-box {
+  margin: 0 auto;
+  width: 85vh;
+  height: 45vh;
+  background-color: orange;
+  border: 25px;
+  background-image: url("/assets/project-preview/chrome.png");
+  background-size: cover;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 8px 6px -6px black;
+}
+.slide-box:hover {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-10px);
+}
+
+.slide-title {
+  font-weight: 500;
+}
+
+.slide-description {
+  font-size: 15px;
+}
+
+.slider {
+  margin: 0 auto;
+  height: 45vh;
+}
+.slider-content {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2%;
+  height: 22vh;
+}
+
+.separation {
+  padding-top: 1%;
+}
+
+.project-technologies {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 40vw;
+}
+
+.project-technology {
+  margin: 0 auto;
+  display: inline-block;
+  color: #399cf9;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

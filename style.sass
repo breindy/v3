@@ -1,7 +1,7 @@
 $primary: #399cf9
 $primary-hover: #48abff
 $skillsBubble: #efefef
-
+    
 @mixin general-font-styles
     font-family: Gotham
     font-style: normal
@@ -28,6 +28,7 @@ $skillsBubble: #efefef
     justify-content: center
     align-items: center
 
+
 *
     font-size: 18px
     @include general-font-styles
@@ -38,6 +39,8 @@ $skillsBubble: #efefef
 .container
     padding-top: 5%
 
+
+    
 /* NAVBAR SECTION */
 #navbar-logo
     font-family: Brandon Grotesque
@@ -156,7 +159,7 @@ a.navbar-item:hover
 img#landing-pfp
     transform: translateY(70px)
     width: 80%
-    border-radius: 30px
+    border-radius: 30px    
 
 .other-sections
     display: grid
@@ -166,9 +169,8 @@ img#landing-pfp
 
 /* ABOUT CONTENT */
 .about-content, .experience-content, .projects-content
-    
     width: 100%
-    height: 70vh
+    height: 72vh
     
 
 
@@ -231,9 +233,6 @@ img#landing-pfp
 
 #experience
     grid-area: overlap
-    background-color: #ff7f50
-    background-image: url("//www.kirupa.com/images/yellowSquare.png")
-    background-repeat: no-repeat
 
 #projects
     grid-area: overlap
@@ -257,7 +256,7 @@ img#landing-pfp
         width: 150px
         height: 150px
         border-radius: 50%
-        background-image: url('/assets/headshot.jpeg')
+        background-image: url('/assets/headshot-min.jpeg')
         background-size: 600px
         background-position: -235px 620px
 
@@ -275,7 +274,7 @@ img#landing-pfp
         font-weight: 500
 
 .social-footer
-    z-index: 2
+    z-index: 15
     position: fixed
     top: 95%
     -webkit-transform: translateY(-50%)
@@ -284,7 +283,7 @@ img#landing-pfp
     & a
         display: block
         text-align: center
-        padding: 5px 25px
+        padding: 5px 17px
         transition: all 0.3s ease
         font-size: 22px
         & i
@@ -295,13 +294,65 @@ img#landing-pfp
             color: $primary-hover
             opacity: 0.7
 
-
 .vertical-line
-    margin-left: 35px
+    margin-left: 26px
     border-left: 2px solid $primary
     height: 200px
 
+/* EXPERIENCE SECTION */
+.slide-box
+    margin: 0 auto
+    width: 85vh
+    height: 45vh
+    background-color: orange
+    border: 25px
+    background-image: url('/assets/project-preview/chrome.png')
+    background-size: cover
+    border-radius: 20px
+    transition: 0.5s ease-in-out
+    box-shadow: 0 8px 6px -6px black
+    &:hover
+        cursor: pointer
+        transition: transform .5s ease-in-out
+        transform: translateY(-10px) 
+        
 
+.slide-title
+    font-weight: 500
+
+.slide-description
+    font-size: 15px
+
+.slider 
+    margin: 0 auto
+    // background-color: $primary
+    height: 45vh
+
+    &-content
+        width: 50vw
+        margin: 0 auto
+        text-align: center
+        // background-color: $skillsBubble
+        padding-top: 2%
+        height: 22vh
+        
+
+.separation
+    padding-top: 1%
+
+.project
+    &-technologies
+        display: inline-flex
+        justify-content: space-between
+        width: 40vw
+        // background-color: red
+       
+
+.project-technology
+    margin: 0 auto
+    display: inline-block
+    color: $primary
+    font-weight: 500
     
 
 
