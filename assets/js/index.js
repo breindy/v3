@@ -4,11 +4,9 @@ $(document).on('click', '.navbar-item', function() {
 
 //navbar links event listener
 var navbarItem = document.querySelectorAll('.navbar-item.itemLinks');
-console.log(navbarItem);
 
 //content sections
 var contentSections = document.querySelectorAll('.section');
-console.log(contentSections);
 
 // CONTENT SLIDING
 var links = document.querySelectorAll('li.itemLinks');
@@ -59,6 +57,20 @@ function removeActiveLinks() {
 		links[i].classList.remove('active');
 	}
 }
+
+//landing cta click
+var learnMore = document.querySelector('.landing-cta__learn-more');
+learnMore.addEventListener('click', function() {
+	for (let i = 0; i < navbarItem.length - 1; i++) {
+		links[i].classList.remove('active');
+		navbarItem[i].classList.remove('current');
+	}
+	var linkNum = 1;
+	//show #about
+	contentSections[1].classList.add('currentSection');
+	navbarItem[linkNum].classList.add('current');
+	links[linkNum].classList.add('active');
+});
 
 // Handle changing the slider position as well as ensure
 // the correct link is highlighted as being active
