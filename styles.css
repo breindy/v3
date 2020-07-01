@@ -247,9 +247,6 @@ img#landing-pfp {
 
 #projects {
   grid-area: overlap;
-  background-color: #DC143C;
-  background-image: url("//www.kirupa.com/images/graySquare.png");
-  background-repeat: no-repeat;
 }
 
 @keyframes transitionIn {
@@ -353,6 +350,13 @@ img#landing-pfp {
   height: 22vh;
 }
 
+.slideLink {
+  position: absolute;
+  top: 67%;
+  left: 73%;
+  color: #399cf9;
+}
+
 .arrow {
   border: solid #399cf9;
   border-width: 0 3px 3px 0;
@@ -405,6 +409,119 @@ img#landing-pfp {
 .currentSlider {
   display: block;
   z-index: 20;
+}
+
+/* EXPERIENCE SECTION */
+.tabs {
+  display: flex;
+}
+
+.tabs__sidebar {
+  padding-top: 10%;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.tabs__button {
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  background: white;
+}
+
+.tabs__button:active {
+  background: white;
+}
+
+.tabs__button--active {
+  font-weight: bold;
+  border-right: 3px solid #359cf9;
+  background: white;
+}
+
+.tabs__content {
+  display: none;
+  color: black;
+}
+
+.tabs__content--active {
+  width: 70%;
+  animation: transitionIn 0.75s;
+  display: block;
+}
+
+.tabs__content > :first-child {
+  margin-top: 0;
+}
+
+.experience-box:hover {
+  box-shadow: 5px 5px #359cf9;
+}
+
+.experience--left-content {
+  padding-top: 5%;
+  width: 50vw;
+  height: 500px;
+  color: black;
+}
+
+.experience--left-content img {
+  width: 40%;
+  margin: auto;
+  display: block;
+}
+
+.experience--left-content a {
+  text-decoration: none;
+}
+
+.left-experience-description {
+  width: 50vw;
+  overflow: wrap;
+  white-space: normal;
+  margin-top: 2%;
+  line-height: 25px;
+}
+
+.experience--company-logo {
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 2vh;
+}
+
+.box-company-logo {
+  max-width: 25%;
+}
+
+.experience-role, .experience-duration {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.experience-description {
+  padding-bottom: 2vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  text-align: center;
+}
+
+.experience--skills-used {
+  padding-top: 2%;
+  display: flex !important;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-between !important;
+  color: #359cf9 !important;
+}
+
+.experience-bullet {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */
