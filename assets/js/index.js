@@ -75,3 +75,78 @@ function changePosition(link) {
 function scrollTo(position) {
 	window.scrollY(position);
 }
+
+var slideBox = document.querySelector('.slide-box');
+
+//Display correct slideContent based on number
+var slideContents = document.querySelectorAll('.slideContent');
+console.log(slideContents);
+
+//event listener on arrow buttons
+var rightBtnSlider = document.querySelector('.arrow.right');
+console.log(rightBtnSlider);
+
+rightBtnSlider.addEventListener('click', next);
+
+var leftBtnSlider = document.querySelector('.arrow.left');
+console.log(leftBtnSlider);
+
+leftBtnSlider.addEventListener('click', prev);
+
+var slideThumbs = [
+	'/assets/project-preview/chrome.png',
+	'/assets/project-preview/sigmatech.png',
+	'/assets/project-preview/wedev.png'
+];
+
+var slideLinks = [
+	'https://github.com/breindy/SafeTrade',
+	'https://github.com/breindy/College-Database-Management-System',
+	'https://github.com/breindy/weDev'
+];
+
+var slideCount = 0;
+
+//when rightBtnSlider is clicked, increment count
+function next() {
+	if (slideCount >= slideThumbs.length - 1) {
+		slideCount = -1;
+	}
+
+	slideCount++;
+
+	showSlideContent();
+	return setSlideThumb();
+}
+
+function prev() {
+	if (slideCount <= 0) {
+		slideCount = slideThumbs.length;
+	}
+	slideCount--;
+
+	showSlideContent();
+	return setSlideThumb();
+}
+
+function setSlideThumb() {
+	console.log(slideBox.onclick);
+	slideBox.style.backgroundSize = 'cover';
+	return (slideBox.style.backgroundImage = 'url(' + slideThumbs[slideCount] + ')');
+}
+
+//set currentSlide to slideCount's div content
+function showSlideContent() {
+	for (let i = 0; i < slideContents.length; i++) {
+		slideContents[i].classList.remove('currentSlider');
+	}
+
+	//add currentslider class to the right slideContent div
+	slideContents[slideCount].classList.add('currentSlider');
+}
+
+//change slideLink
+function changeSlideLinks() {
+	// window.open('http://www.google.com','new_window');
+	return window.open(' ' + slideLinks[slideCount] + ' ', 'new_window');
+}

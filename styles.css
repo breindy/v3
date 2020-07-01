@@ -320,11 +320,10 @@ img#landing-pfp {
   margin: 0 auto;
   width: 85vh;
   height: 45vh;
-  background-color: orange;
   border: 25px;
   background-image: url("/assets/project-preview/chrome.png");
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 5px;
   transition: 0.5s ease-in-out;
   box-shadow: 0 8px 6px -6px black;
 }
@@ -366,17 +365,17 @@ img#landing-pfp {
   opacity: 0.78;
 }
 
-.right {
+.left {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 10%;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
 
-.left {
+.right {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 10%;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -397,6 +396,15 @@ img#landing-pfp {
   display: inline-block;
   color: #399cf9;
   font-weight: 500;
+}
+
+.slideContent {
+  display: none;
+}
+
+.currentSlider {
+  display: block;
+  z-index: 20;
 }
 
 /*# sourceMappingURL=styles.css.map */
