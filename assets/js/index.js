@@ -65,11 +65,10 @@ learnMore.addEventListener('click', function() {
 		links[i].classList.remove('active');
 		navbarItem[i].classList.remove('current');
 	}
-	var linkNum = 1;
 	//show #about
 	contentSections[1].classList.add('currentSection');
-	navbarItem[linkNum].classList.add('current');
-	links[linkNum].classList.add('active');
+	navbarItem[1].classList.add('current');
+	links[1].classList.add('active');
 });
 
 // Handle changing the slider position as well as ensure
