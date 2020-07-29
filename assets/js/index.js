@@ -105,7 +105,7 @@ console.log(leftBtnSlider);
 leftBtnSlider.addEventListener('click', prev);
 
 var slideThumbs = [
-	'/assets/project-preview/chrome.png',
+	'/assets/project-preview/safetrade.png',
 	'/assets/project-preview/sigmatech.png',
 	'/assets/project-preview/wedev.png'
 ];

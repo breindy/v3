@@ -1,7 +1,7 @@
 $primary: #399cf9
 $primary-hover: #48abff
 $skillsBubble: #efefef
-    
+
 @mixin general-font-styles
     font-family: Gotham
     font-style: normal
@@ -28,7 +28,6 @@ $skillsBubble: #efefef
     justify-content: center
     align-items: center
 
-
 *
     font-size: 18px
     @include general-font-styles
@@ -39,8 +38,6 @@ $skillsBubble: #efefef
 .container
     padding-top: 5%
 
-
-    
 /* NAVBAR SECTION */
 #navbar-logo
     font-family: Brandon Grotesque
@@ -90,7 +87,6 @@ $skillsBubble: #efefef
 a.navbar-item:hover
     background-color: white
     color: $primary
-
 
 /* LANDING CONTENT SECTION */
 .landing-container
@@ -159,7 +155,7 @@ a.navbar-item:hover
 img#landing-pfp
     transform: translateY(70px)
     width: 80%
-    border-radius: 30px    
+    border-radius: 30px
 
 .other-sections
     display: grid
@@ -168,17 +164,19 @@ img#landing-pfp
     grid-template-areas: "overlap"
 
 /* ABOUT CONTENT */
-.about-content, .experience-content, .projects-content
+.about-content, .experience-content, .projects-content, .tabbed
     width: 100%
     height: 72vh
-    
 
+.is-vertical-center
+    display: flex
+    align-items: center
+    justify-content: center
 
 /* CONTENT SLIDER ATTEMPT */
 #contentsContainer
     width: 100%
     overflow: hidden
-
 
 /* NAVIGATION STYLES */
 #navigation
@@ -209,8 +207,6 @@ img#landing-pfp
                     background-color: 484848
                     color: #ffffff
 
-
-
 .wrapper
     position: relative
     width: 100vw
@@ -227,16 +223,14 @@ img#landing-pfp
     z-index: 10
     display: block
 
-#about 
+#about
     grid-area: overlap
-    
 
 #experience
     grid-area: overlap
 
 #projects
     grid-area: overlap
-
 
 @keyframes transitionIn
     from
@@ -245,7 +239,6 @@ img#landing-pfp
     to
         opacity: 1
         transform: translateY(0)
-
 
 .about
     &-picture
@@ -265,7 +258,6 @@ img#landing-pfp
         & p
             font-size: 15px
 
-        
     &-school
         font-size: 15px
         font-weight: 500
@@ -299,10 +291,13 @@ img#landing-pfp
 /* EXPERIENCE SECTION */
 .slide-box
     margin: 0 auto
+    // max-width: 50vw
+    // min-width: 50vw
     width: 85vh
     height: 45vh
     border: 25px
     background-image: url('/assets/project-preview/chrome.png')
+    // background-size: 100% auto
     background-size: cover
     border-radius: 5px
     transition: 0.5s ease-in-out
@@ -310,8 +305,7 @@ img#landing-pfp
     &:hover
         cursor: pointer
         transition: transform .5s ease-in-out
-        transform: translateY(-10px) 
-        
+        transform: translateY(-10px)
 
 .slide-title
     font-weight: 500
@@ -319,7 +313,7 @@ img#landing-pfp
 .slide-description
     font-size: 15px
 
-.slider 
+.slider
     margin: 0 auto
     // display: inline-block
     // background-color: $primary
@@ -360,8 +354,6 @@ img#landing-pfp
     right: 10%
     transform: rotate(-45deg)
     -webkit-transform: rotate(-45deg)
-    
-        
 
 .separation
     padding-top: 1%
@@ -372,7 +364,6 @@ img#landing-pfp
         justify-content: space-between
         width: 40vw
         // background-color: red
-       
 
 .project-technology
     margin: 0 auto
@@ -383,130 +374,87 @@ img#landing-pfp
 .slideContent
     display: none
 
-.currentSlider 
+.currentSlider
     display: block
     z-index: 20
 
 /* EXPERIENCE SECTION */
-.tabs
-  display: flex
 
 
-.tabs__sidebar 
-  padding-top: 10%
-  width: 150px
-  flex-shrink: 0
+.experience--company-logo
+    width: 25%
+    // margin-bottom: 1%
+    // padding-left: 2vh
 
-
-.tabs__button 
-  font-size: 16px
-  display: block
-  padding: 10px
-  border: none
-  width: 100%
-  outline: none
-  cursor: pointer
-  background: white
-
-
-.tabs__button:active 
-  background: white
-
-
-.tabs__button--active 
-  font-weight: bold
-  border-right: 3px solid #359cf9
-  background: white
-
-
-.tabs__content 
-  display: none 
-  color: black
-//   padding: 15px
-  font-size: 12px
-  height: 72vh
-  width: 40vw
-
-.tabs__content--active 
-  width: 70%
-  animation: transitionIn 0.75s
-  display: block
-
-
-.tabs__content > :first-child 
-  margin-top: 0
-
-
-
-
-.experience-box:hover 
-  box-shadow: 5px 5px #359cf9
-
-
-.experience--left-content 
-  padding-top: 5%
-  width: 50vw
-  height: 500px
-  color: black
-
-
-.experience--left-content img 
-  width: 40%
-  margin: auto
-  display: block
-
-.experience--left-content a
-    text-decoration: none
-
-
-.left-experience-description
-  width: 50vw
-  overflow: wrap
-  white-space: normal
-  margin-top: 2%
-  line-height: 25px
-
-
-
-.experience--company-logo 
-  width: 30%
-  margin-top: 2%
-  margin-bottom: 2%
-  padding-left: 2vh
-
-
-.box-company-logo 
-  max-width: 25%
-
-
-.experience-role, .experience-duration 
-    padding-top: 2%
+.experience-content
     text-align: center
 
+.experience-role
+    font-size: 0.9em
+    font-weight: 500
+    color: #359cf9
+    
 
-.experience-description 
-  padding-bottom: 2vh
-  padding-left: 2vh
-  padding-right: 2vh
-  text-align: center
+.experience-description
+    font-size: 0.8em
+    margin: 10px 10px
+
+.tabbed
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 10%)
+    width: 720px
+    height: 400px
+    padding: 30px 20px
+    overflow: hidden
+    display: inline-block
+
+.tab
+    &-header
+        float: left
+        height: 80%
+        padding: 50px 0
+        & > div > p
+            height: 50px
+            line-height: 50px
+            font-size: 0.9em
+            font-weight: 500
+            cursor: pointer
+            padding-left: 10px
 
 
-.experience--skills-used 
-  padding-top: 2%
-  display: flex !important
-  list-style: none
-  flex-direction: row
-  justify-content: space-between !important
-  color: #359cf9 !important
+        & div p
+            display: inline-block
 
-.experience-bullet 
-  text-transform: uppercase
-  font-weight: 500
+    &-content
+        position: relative
+        height: 100%
+        overflow: hidden
+        & > div
+            position: absolute
+            text-align: center
+            padding: 40px 20px
+            top: -200%
 
+        
+    &-indicator
+        position: absolute
+        width: 4px
+        height: 35px
+        background: #00acee
+        left: 140px
+        top: 84px
+        border-radius: 50px
+        transition: all 500ms ease-in-out
 
+.tab-header > div.active,
+.tab-header > div:hover
+    p
+        color: #00acee
 
-
-
+.tab-content > div.active
+    text-align: center
+    top: 0px
     
 
 

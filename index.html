@@ -120,9 +120,10 @@
                     <!-- ABOUT SECTION -->
                     <div class="other-sections">
                     <section class="section">
-                        <div class="container column is-full about-container">
-                            <div class="is-vcentered about-content" id="about">
+                        <div class="container column is-full is-vertical-center is-centered about-container">
+                            <div class="column is-three-fifths is-vertical-center about-content" id="about" style="margin: auto;">
                                 <p></p>
+                                <div class="about-content-container ">
                                 <div class="about-picture">
                                     
                                 </div>
@@ -150,6 +151,7 @@
                                     </p>
 
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </section>
@@ -229,100 +231,60 @@
                         <div class="container projects-container">
                             <div class="is-vcentered projects-content" id="experience">
                                 <p></p>
-                                <div class="tabs">
-                                    <div class="tabs__sidebar">
-                                        <button class="tabs__button tabs__button--active" data-for-tab="1">CSforALL</button>
-                                        <button class="tabs__button tabs__button" data-for-tab="2">CSforALL</button>
-                                        <button class="tabs__button" data-for-tab="3">CodePath</button>
-                                        <button class="tabs__button" data-for-tab="4">CUNY Tech Prep</button>
-                                        <button class="tabs__button" data-for-tab="5">Win2Learn</button>
-                                    </div>
-
-                                    <div class="tabs__content tabs__content--active" data-tab="1">
-                                        <div class="experience--left-content">
-                                        
-                                            <img src="/assets/logos/cs4all-logo.png" class="experience--company-logo">
-                                            <p class="experience-role"><em>UI Developer</em></p>
-                                            <p class="experience-duration">June 2019 - April 2020</p>
-                                            <div class="left-experience-description" style="text-align: center">
-                                                Designed and implemented front end user interfaces, data visualizations and web applications using D3.js, Python, React that help support various projects.
-<br/><br/>Created wireframes to build UI mockups that anticipate user’s needs in order to provide accessibility and ease-of-use to all using Figma, Photoshop and Illustrator.
-                                                <br/>
-                                            
-                                            </div>
-                                
+                                <div class="tabbed columns">  
+                                    <div class="tab-header column is-one-quarter">
+                                        <div class="active">
+                                            <p>CSforALL</p>
+                                        </div>
+                                        <div>
+                                            <p>CSforALL</p>
+                                        </div>
+                                        <div>
+                                            <p>CodePath</p>
+                                        </div>
+                                        <div>
+                                            <p>Win2Learn</p>
                                         </div>
                                     </div>
-
-                                    <div class="tabs__content tabs__content" data-tab="2">
-                                        <div class="experience--left-content">
-                                        
-                                            <img src="/assets/logos/cs4all-logo.png" class="experience--company-logo">
-                                            <p class="experience-role"><em>Junior Web Design Associate</em></p>
-                                            <p class="experience-duration">November 2018 - June 2019</p>
-                                            <div class="left-experience-description" style="text-align: center">
-                                                Create visually appealing graphical user interfaces of various CSforALL <br/>research projects
-                                                 to produce designs that can process data,<br/>visualize data using D3.js. <br/>
-                                                <br/>
-                                                Work alongside Research Associates in developing designs of graphical artifacts to support project findings using Photoshop, and Illustrator.  
-                                            
-                                            </div>
-                                
-                                        </div>
-                                    </div>
-
-                                    <div class="tabs__content" data-tab="3">
-                                        <div class="experience--left-content">
-                                            
-                                            <img src="/assets/logos/codepath-logo.png" class="experience--company-logo">
-                                            <p class="experience-role"><em>Lead Technical Program Manager</em></p>
-                                            <p class="experience-duration">August 2018 - December 2018</p>
-                                            <p class="left-experience-description" style="text-align: center">
-                                                Lead 4 other Technical Program Managers at City College and providing first line support to 120 students in Facebook-CodePath Cyber Security Course. <br/>
-                                                <br/>
-                                                Taught in-class sessions at City College and assist students with in-class labs, providing an introduction to OWASP Top 10 Web Vulnerabilities such as SQL Injection, Cross Site Scripting, Broken Authentication & Session Management and more. 
-                                                <br/> <br/>
-                                            </p>
-                                
-                                        </div>
-                                        </div>
-
-                                        
-                                        <div class="tabs__content" data-tab="4">
-                                            <div class="experience--left-content">
-                                        
-                                            <img src="/assets/logos/ctp-logo2.jpg" class="experience--company-logo box-company-logo">
-                                            <p class="experience-role"><em>Software Student Developer</em></p>
-                                            <p class="experience-duration">June 2018 - February 2019</p>
-                                            <p class="left-experience-description" style="text-align: center">
-                                                Selected for a full stack JavaScript training program, as one of 125 students out of 400+ applicants.<br/>
-                                                <br/>
-                                                Learned in-demand technologies like React, Node + Express, and PostgreSQL as well as industry best practices for design, implementation, and deployment.
-                                
-                                                <br/> <br/>
-                                            </p>
                                     
-                                            
-                                            </div>
-                                        </div>
+                                    <div class="tab-indicator"></div>
+                                   
 
-                                        
-                                        <div class="tabs__content" data-tab="5">
-                                            <div class="experience--left-content">
-                                          
-                                                <img src="/assets/logos/win2learn-logo.png" class="experience--company-logo">
-                                                <p class="experience-role"><em>Teacher / Web Developer Intern</em></p>
-                                                <p class="experience-duration">June 2017 - August 2017</p>
-                                                <p class="left-experience-description" style="text-align: center">
-                                                    Created extensive lesson plans to teach Game Design to students (K-8) using Python and JavaScript. <br/>
-                                                    <br/>
-                                                    Assisted in implementing mobile-friendly website and increased User Interface that increased Starcoder workshop engagement by 50%. 
-                                                    <br/> <br/>
-                                                </p>
-                                        
-                                            
-                                            </div>
+                                    <div class="tab-content column">
+                                        <div class="active experience-content">
+                                            <img src="assets/logos/cs4all-logo.png" class="experience--company-logo">
+                                            <p class="experience-role">UI Developer</p>
+                                            <p class="experience-description">Designed and implemented front end user interfaces, 
+                                                data visualizations and web applications using D3.js, Python, React that 
+                                                help support various projects.</p>
+                                            <p class="experience-description">Created wireframes to build UI mockups that anticipate user’s 
+                                                needs in order to provide accessibility and ease-of-use to all using 
+                                                Figma, Photoshop and Illustrator.</p>
+                                            <p class="experience-description">Collaborated with Developers, Project Managers and Executive 
+                                                to help envision product interfaces and experiences using Agile and Scrum.</p>
                                         </div>
+                                        <div>
+                                            <img src="assets/logos/cs4all-logo.png" class="experience--company-logo">
+                                            <p class="experience-role">Graphic and Web Design Intern</p>
+                                            <p class="experience-description">Implemented and designed visually appealing graphical user interfaces for various CSforALL research
+                                                projects to produce designs that can process data, visualize data using D3.js and Python.</p>
+                                            <p class="experience-description">Worked alongside Research Associates in developing visual graphics and designs, and web-based
+                                                user interfaces to support project findings using Illustrator, Sketch, React, Node and Express.</p>
+                                        </div>
+                                        <div>
+                                            <img src="assets/logos/codepath-logo.png" class="experience--company-logo">
+                                            <p class="experience-role">Lead Technical Program Manager</p>
+                                            <p class="experience-description">Lead 4 other Technical Program Managers at City College and provided first line support to students in Facebook-CodePath Cyber Security Course.</p>
+                                            <p class="experience-description">Taught in-class sessions at City College and assist students with in-class labs, providing an introduction to OWASP Top 10 Web Vulnerabilities.</p>
+                                        </div>
+                                        <div>
+                                            <img src="assets/logos/win2learn-logo.png" class="experience--company-logo">
+                                            <p class="experience-role">Teacher / Web Developer Intern</p>
+                                            <p class="experience-description">Created extensive lesson plans to teach Game Design to 30 students (K-8) using Python and JavaScript.</p>
+                                            <p class="experience-description">Developed a real-time messaging application to allow users to share JavaScript code to other Starcode players using HTML, Bootstrap, jQuery, Node, Express, Socket.io</p>
+                                            <p class="experience-description">Improved mobile-friendly website for better User Interface that helped increased student learning game, Starcoder, workshop engagement by 50%.</p>
+                                        </div>
+                                    </div>
                                 </div>
 
 
@@ -351,5 +313,6 @@
 
 
         <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/tab.js"></script>
   </body>
 </html>
